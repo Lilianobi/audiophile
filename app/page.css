@@ -1,0 +1,32 @@
+.homepage {
+  min-height: 100vh;
+}
+
+
+.homepage > section {
+  margin-bottom: 168px;
+}
+
+.homepage > section:last-child {
+  margin-bottom: 200px;
+}
+
+@media (max-width: 1439px) {
+  .homepage > section {
+    margin-bottom: 96px;
+  }
+
+  .homepage > section:last-child {
+    margin-bottom: 96px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homepage > section {
+    margin-bottom: 120px;
+  }
+
+  .homepage > section:last-child {
+    margin-bottom: 120px;
+  }
+}

@@ -1,0 +1,93 @@
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-family);
+  line-height: 1;
+}
+
+/* Primary Button (Orange) */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+/* Secondary Button (Transparent with border) */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Tertiary Button (Text only) */
+.btn--tertiary {
+  background-color: transparent;
+  color: var(--color-black);
+  opacity: 0.5;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.btn--tertiary:hover:not(:disabled) {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.btn--tertiary::after {
+  content: '›';
+  font-size: 20px;
+  color: var(--color-primary);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn--tertiary:hover::after {
+  transform: translateX(5px);
+}
+
+/* Black Button */
+.btn--black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn--black:hover:not(:disabled) {
+  background-color: #4C4C4C;
+}
+
+/* Disabled State */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Full Width */
+.btn--full {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .btn {
+    padding: 15px 28px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,154 @@
+.category-page {
+  min-height: 100vh;
+}
+
+/* Category Header */
+.category-header {
+  background-color: var(--color-black);
+  padding: 98px 0;
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.category-header h2 {
+  color: var(--color-white);
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+}
+
+/* Product List */
+.product-list {
+  margin-bottom: 160px;
+}
+
+.product-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 125px;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+.product-item:last-child {
+  margin-bottom: 0;
+}
+
+.product-item--reverse {
+  direction: rtl;
+}
+
+.product-item--reverse > * {
+  direction: ltr;
+}
+
+.product-item__image {
+  background-color: var(--color-grey);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-item__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-item__content {
+  max-width: 445px;
+}
+
+.product-item__content .overline {
+  margin-bottom: 16px;
+  display: block;
+}
+
+.product-item__content h2 {
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.product-item__category {
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 32px;
+  opacity: 1;
+}
+
+.product-item__description {
+  opacity: 0.5;
+  margin-bottom: 40px;
+  line-height: 25px;
+}
+
+/* Tablet Styles */
+@media (max-width: 1439px) {
+  .category-header {
+    padding: 105px 0;
+    margin-bottom: 120px;
+  }
+
+  .product-list {
+    margin-bottom: 120px;
+  }
+
+  .product-item {
+    grid-template-columns: 1fr;
+    gap: 52px;
+    margin-bottom: 120px;
+    text-align: center;
+    direction: ltr !important;
+  }
+
+  .product-item__content {
+    max-width: 572px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .category-header {
+    padding: 32px 0;
+    margin-bottom: 64px;
+  }
+
+  .category-header h2 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
+
+  .product-list {
+    margin-bottom: 120px;
+  }
+
+  .product-item {
+    gap: 32px;
+    margin-bottom: 120px;
+  }
+
+  .product-item__content {
+    max-width: 100%;
+  }
+
+  .product-item__content h2 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+  }
+
+  .product-item__category {
+    font-size: 28px;
+  }
+
+  .product-item__description {
+    margin-bottom: 24px;
+  }
+}

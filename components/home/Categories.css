@@ -1,0 +1,136 @@
+.categories {
+  padding: 200px 0 0;
+  position: relative;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.category-card {
+  background-color: var(--color-grey);
+  border-radius: var(--border-radius);
+  padding: 88px 0 22px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: var(--color-black);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 204px;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card__image-wrapper {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+
+.category-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  drop-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.category-card__title {
+  font-size: 18px;
+  letter-spacing: 1.29px;
+  margin-top: 52px;
+  margin-bottom: 15px;
+}
+
+.category-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.category-card:hover .category-card__link {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.category-card__link svg {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-card__link svg {
+  transform: translateX(3px);
+}
+
+/* Tablet Styles */
+@media (max-width: 1439px) {
+  .categories {
+    padding: 150px 0 0;
+  }
+
+  .categories__grid {
+    gap: 10px;
+  }
+
+  .category-card {
+    min-height: 165px;
+    padding: 88px 0 22px;
+  }
+
+  .category-card__image-wrapper {
+    top: -52px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .category-card__title {
+    margin-top: 0;
+    font-size: 15px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .categories {
+    padding: 92px 0 0;
+  }
+
+  .categories__grid {
+    grid-template-columns: 1fr;
+    gap: 68px;
+  }
+
+  .category-card {
+    min-height: 165px;
+    padding: 0 0 22px;
+  }
+
+  .category-card__image-wrapper {
+    top: -42px;
+    width: 150px;
+    height: 130px;
+  }
+
+  .category-card__title {
+    margin-top: 100px;
+  }
+}

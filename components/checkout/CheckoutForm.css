@@ -1,0 +1,233 @@
+.checkout-form {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 54px 48px 48px;
+}
+
+.checkout-form h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  margin-bottom: 41px;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 53px;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 32px;
+}
+
+.form-section__title {
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.93px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+/* Form Fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+
+.form-field label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-field__error {
+  color: var(--color-error);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"] {
+  height: 56px;
+  padding: 0 24px;
+  border: 1px solid #CFCFCF;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--color-black);
+  transition: var(--transition);
+  font-family: var(--font-family);
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-field input.error {
+  border-color: var(--color-error);
+}
+
+.form-field input::placeholder {
+  color: var(--color-black);
+  opacity: 0.4;
+}
+
+.form-field input:disabled {
+  background-color: var(--color-grey);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Radio Buttons */
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 56px;
+  padding: 0 24px;
+  border: 1px solid #CFCFCF;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  margin-bottom: 16px;
+}
+
+.radio-label:last-child {
+  margin-bottom: 0;
+}
+
+.radio-label:hover {
+  border-color: var(--color-primary);
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: var(--color-primary);
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  opacity: 1;
+}
+
+.radio-label input[type="radio"]:disabled ~ * {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #CFCFCF;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+/* Cash on Delivery Message */
+.cash-message {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.cash-message svg {
+  flex-shrink: 0;
+}
+
+.cash-message p {
+  opacity: 0.5;
+  line-height: 25px;
+  margin: 0;
+}
+
+/* Tablet Styles */
+@media (max-width: 1439px) {
+  .checkout-form {
+    padding: 30px 28px;
+  }
+
+  .checkout-form h3 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+
+  .form-section {
+    margin-bottom: 48px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .checkout-form {
+    padding: 24px;
+  }
+
+  .checkout-form h3 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-section {
+    margin-bottom: 32px;
+  }
+
+  .cash-message {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
